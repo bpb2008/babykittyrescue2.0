@@ -2,6 +2,7 @@
 
 import React from "react";
 import AboveFooter from "./AboveFooter";
+import LoginPage from "@/app/routes/login/page";
 
 const Footer: React.FC = () => {
   const handleScrollToTop = () => {
@@ -17,6 +18,7 @@ const Footer: React.FC = () => {
       <footer className="flex flex-row bg-[#221a20] text-white py-[20px] pl-[50px] pr-[20px] justify-between">
         <p>Copyright 2021 Baby Kitty Rescue. All Rights Reserved.</p>
         <div className="flex flex-row gap-[30px]">
+          <LoginPage />
           <ul className="flex flex-row gap-[15px]">
             <li>FB</li>
             <li>IG</li>
