@@ -45,10 +45,10 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/3">
             <Donation />
           </div>
-          <div className="bg-[#DCCAE3] w-full lg:w-1/2 px-6 py-12 lg:px-[100px] lg:py-[100px]">
+          <div className="bg-[#DCCAE3] w-full lg:w-2/3 px-6 py-12 lg:px-[100px] lg:py-[100px]">
             {[
               {
                 title: "Kitten Care & Medical Support",
