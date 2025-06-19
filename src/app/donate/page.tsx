@@ -11,8 +11,11 @@ const Donate: React.FC = () => {
         <div className="flex flex-col lg:flex-row justify-around items-center w-full max-w-7xl gap-12">
           <div className="text-center lg:text-left lg:w-1/2">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
-              EVEN YOUR SMALLEST <br />
-              CONTRIBUTION CAN MAKE <br />A BIG DIFFERENCE.
+              EVEN YOUR <br />
+              SMALLEST <br />
+              CONTRIBUTION <br />
+              CAN MAKE A BIG <br />
+              DIFFERENCE.
             </h2>
           </div>
           <div className="lg:w-1/2">
