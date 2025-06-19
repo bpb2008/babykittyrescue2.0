@@ -6,76 +6,69 @@ import Donation from "./Donation";
 const HomePage: React.FC = () => {
   return (
     <div>
-      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed"></section>
+      <section className="h-screen bg-[url('/kittens_in_basket.jpg')] grayscale-80 bg-cover bg-center bg-fixed" />
       <main className="bg-white">
-        <section className="bg-[#f5f2f8] p-70 mt-[-100px]"></section>
-        <section className="bg-white flex flex-row p-[10px] justify-center">
+        <section className="bg-[#f5f2f8] p-16 mt-[-100px]" />
+        <section className="bg-white flex px-4 py-8 justify-center">
           <iframe
             src="https://www.youtube.com/embed/vgEJJ72DXio"
             title="Baby Kitty Rescue Committee Mission"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="w-4/5 h-[600px] border-none"
+            className="w-full max-w-3xl h-[300px] md:h-[500px] border-none"
           ></iframe>
         </section>
-        <div className="flex flex-row gap-[15px] bg-[#f5f2f8] w-full pt-[15px] pb-[30px] px-[100px]">
+        <div className="flex flex-col md:flex-row gap-4 bg-[#f5f2f8] w-full pt-6 pb-10 md:px-[100px]">
           <div className="bg-white shadow-xs px-[15px] py-[15px]">
-            <h3>Community Partnership</h3>
-            <p>
-              We collaborate with other animal rescue & shelters in the Puget
-              Sound region to focus on rescuing only the homeless newborn
-              kittens.
-            </p>
-          </div>
-          <div className="bg-white shadow-xs px-[15px] py-[15px]">
-            <h3>Care</h3>
-            <p>
-              We provide specialized neonatal care to the orphaned kittens until
-              they grow from infants to more than 8-week old, adoptable kittens.
-            </p>
-          </div>
-          <div className="bg-white shadow-xs px-[15px] py-[15px]">
-            <h3>Furever Home</h3>
-            <p>
-              We also create socializing opportunities for these little ones to
-              prepare them for a gentle transition to their furever homes.
-            </p>
+            {[
+              {
+                title: "Community Partnership",
+                desc: "We collaborate with other animal rescue & shelters in the Puget Sound region to focus on rescuing only the homeless newborn kittens.",
+              },
+              {
+                title: "Care",
+                desc: "We provide specialized neonatal care to the orphaned kittens until they grow from infants to more than 8-week old, adoptable kittens.",
+              },
+              {
+                title: "Furever Home",
+                desc: "We also create socializing opportunities for these little ones to prepare them for a gentle transition to their furever homes.",
+              },
+            ].map(({ title, desc }) => (
+              <div
+                key={title}
+                className="bg-white shadow-xs px-6 py-6 rounded-md text-center md:text-left"
+              >
+                <h3 className="font-bold mb-2">{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="flex flex-row">
-          <Donation />
-          <div className="bg-[#DCCAE3] px-[100px] py-[100px]">
-            <div className="mb-[20px]">
-              <img />
-              <h3 className="font-bold mb-[10px]">
-                Kitten Care & Medical Support
-              </h3>
-              <p>
-                With your support, we can provide the best quality care for our
-                kittens. This includes: medical expenses, kitten milk
-                replacement (KMR) formula, kitten food, litter, and toys.
-              </p>
-            </div>
-            <div className="mb-[20px]">
-              <img />
-              <h3 className="font-bold mb-[10px]">
-                Shelter Housing & Supplies
-              </h3>
-              <p>
-                Additionally, your generous support will help us keep our
-                facilities up and running. This will ensure that we can provide
-                a safe space for rescued kittens.
-              </p>
-            </div>
-            <div>
-              <img />
-              <h3 className="font-bold mb-[10px]">Operations & Equipment</h3>
-              <p>
-                Lastly, your donation can help us to purchase equipment and hire
-                staff to continue improving our operations and ensuring that we
-                can expand to help rescue more kittens.
-              </p>
-            </div>
+        <div className="flex flex-col lg:flex-row">
+          <div className="w-full lg:w-1/2">
+            <Donation />
+          </div>
+          <div className="bg-[#DCCAE3] w-full lg:w-1/2 px-6 py-12 lg:px-[100px] lg:py-[100px]">
+            {[
+              {
+                title: "Kitten Care & Medical Support",
+                desc: "With your support, we can provide the best quality care for our kittens. This includes: medical expenses, kitten milk replacement (KMR) formula, kitten food, litter, and toys.",
+              },
+              {
+                title: "Shelter Housing & Supplies",
+                desc: "Additionally, your generous support will help us keep our facilities up and running. This will ensure that we can provide a safe space for rescued kittens.",
+              },
+              {
+                title: "Operations & Equipment",
+                desc: "Lastly, your donation can help us to purchase equipment and hire staff to continue improving our operations and ensuring that we can expand to help rescue more kittens.",
+              },
+            ].map(({ title, desc }, index) => (
+              <div key={index} className="mb-8 last:mb-0">
+                <img className="mx-auto mb-4" alt="" /> {/* Placeholder */}
+                <h3 className="font-bold mb-2">{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </main>

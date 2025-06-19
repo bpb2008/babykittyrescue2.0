@@ -1,0 +1,36 @@
+"use client";
+
+import React from "react";
+
+const OurMission: React.FC = () => {
+  return (
+    <div className="bg-white flex flex-col items-center px-[50px] pt-[30px] pb-[50px]">
+      <img
+        src="/woman_feeding_kitten.jpg"
+        alt="Woman feeding kitten with a bottle"
+        className="w-3/4 h-1/4"
+      />
+      <div className="flex flex-row gap-10 m-10">
+        <h2 className="font-bold text-2xl"> OUR MISSION </h2>
+        <div className="">
+          <p>
+            Baby Kitty Rescue Committee is a nonprofit initiative founded to
+            bridge gaps in essential care for newborn stray kittens in the
+            Seattle, Washington area. We rescue and nurture orphaned newborn
+            kittens, offering them the extensive care they need to survive and
+            grow. Once they are old enough to eat on their own and regulate
+            their own body temperature, they will be moved to a special lounge
+            where they can greet potential human companions as they are made
+            available for adoption. Our goal is to offer a service that
+            complements other local animal rescues and shelters by focusing on
+            only the intake and care of neonatal orphans. We want to do
+            everything we can to ensure they are prepared to thrive in their
+            forever homes.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OurMission;

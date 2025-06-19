@@ -23,13 +23,13 @@ const Donation: React.FC = () => {
   }, []);
 
   return (
-    <div className="px-5 py-10">
+    <div className="w-full flex justify-center px-4 py-10">
       <iframe
         src="https://donorbox.org/embed/donate-to-baby-kitty-rescue-committee-1?default_interval=m"
         name="donorbox"
         allow="payment"
         title="Donate to Baby Kitty Rescue Committee"
-        className="w-[400px] h-[900px] max-w-[500px] min-w-[250px] max-h-none"
+        className="w-full max-w-[400px] h-[900px] border-none"
       />
     </div>
   );
