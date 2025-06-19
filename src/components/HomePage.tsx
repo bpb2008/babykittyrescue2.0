@@ -2,6 +2,7 @@
 
 import React from "react";
 import Donation from "./Donation";
+import { Handshake, HeartHandshake, Home } from "lucide-react";
 
 const HomePage: React.FC = () => {
   return (
@@ -19,30 +20,49 @@ const HomePage: React.FC = () => {
           ></iframe>
         </section>
         <div className="flex flex-col md:flex-row gap-4 bg-[#f5f2f8] w-full pt-6 pb-10 md:px-[100px]">
-          <div className="bg-white shadow-xs px-[15px] py-[15px]">
-            {[
-              {
-                title: "Community Partnership",
-                desc: "We collaborate with other animal rescue & shelters in the Puget Sound region to focus on rescuing only the homeless newborn kittens.",
-              },
-              {
-                title: "Care",
-                desc: "We provide specialized neonatal care to the orphaned kittens until they grow from infants to more than 8-week old, adoptable kittens.",
-              },
-              {
-                title: "Furever Home",
-                desc: "We also create socializing opportunities for these little ones to prepare them for a gentle transition to their furever homes.",
-              },
-            ].map(({ title, desc }) => (
-              <div
-                key={title}
-                className="bg-white shadow-xs px-6 py-6 rounded-md text-center md:text-left"
-              >
-                <h3 className="font-bold mb-2">{title}</h3>
-                <p>{desc}</p>
-              </div>
-            ))}
-          </div>
+          {[
+            {
+              title: "Community Partnership",
+              desc: "We collaborate with other animal rescue & shelters in the Puget Sound region to focus on rescuing only the homeless newborn kittens.",
+              icon: (
+                <Handshake
+                  size={32}
+                  color="#DCCAE3"
+                  className="mb-3 mx-auto md:mx-0"
+                />
+              ),
+            },
+            {
+              title: "Care",
+              desc: "We provide specialized neonatal care to the orphaned kittens until they grow from infants to more than 8-week old, adoptable kittens.",
+              icon: (
+                <HeartHandshake
+                  size={32}
+                  color="#DCCAE3"
+                  className="mb-3 mx-auto md:mx-0"
+                />
+              ),
+            },
+            {
+              title: "Furever Home",
+              desc: "We also create socializing opportunities for these little ones to prepare them for a gentle transition to their furever homes.",
+              icon: (
+                <Home
+                  size={32}
+                  color="#DCCAE3"
+                  className="mb-3 mx-auto md:mx-0"
+                />
+              ),
+            },
+          ].map(({ title, desc }) => (
+            <div
+              key={title}
+              className="bg-white shadow-xs px-6 py-6 rounded-md text-center md:text-left md:w-1/3"
+            >
+              <h3 className="font-bold mb-2">{title}</h3>
+              <p>{desc}</p>
+            </div>
+          ))}
         </div>
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/3">

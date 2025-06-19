@@ -3,6 +3,8 @@
 import React from "react";
 import AboveFooter from "./AboveFooter";
 import LoginPage from "@/app/routes/login/page";
+import { Facebook, Instagram, Youtube } from "lucide-react";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const handleScrollToTop = () => {
@@ -20,9 +22,21 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-[30px]">
           <LoginPage />
           <ul className="flex gap-[15px]">
-            <li>FB</li>
-            <li>IG</li>
-            <li>YT</li>
+            <li>
+              <Link href="https://www.facebook.com/babykittyrescue">
+                <Facebook />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.instagram.com/babykittyrescue">
+                <Instagram />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.youtube.com/@babykittyrescuecommittee6888">
+                <Youtube />
+              </Link>
+            </li>
           </ul>
           <button
             onClick={handleScrollToTop}
