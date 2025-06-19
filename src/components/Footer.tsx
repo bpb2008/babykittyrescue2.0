@@ -2,7 +2,7 @@
 
 import React from "react";
 import AboveFooter from "./AboveFooter";
-import LoginPage from "@/app/routes/login/page";
+import LoginPage from "@/app/login/page";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
 
