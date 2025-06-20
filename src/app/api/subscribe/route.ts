@@ -28,8 +28,8 @@ export async function POST(request: Request) {
   }); 
 
   if (response.status >= 400) {
-    const error = await response.json(); 
-    return NextResponse.json({ error: error.detail || "There was an error subscribing." }, { status: 400 });
+    const errorData = await response.json(); 
+    return NextResponse.json({ error: errorData.detail || "There was an error subscribing." }, { status: 400 });
   }
 
   return NextResponse.json({ message: "Success!" }, { status: 200 });

@@ -29,8 +29,12 @@ const Newsletter: React.FC = () => {
       }
       setSubmitted(true);
       setError("");
-    } catch (error: any) {
-      setError(error.message || "Failed to subscribe");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message || "Failed to subscribe.:");
+      } else {
+        setError("Failed to subscribe.");
+      }
     }
   };
 
