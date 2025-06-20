@@ -84,7 +84,7 @@ const HomePage: React.FC = () => {
               },
             ].map(({ title, desc }, index) => (
               <div key={index} className="mb-8 last:mb-0">
-                <img className="mx-auto mb-4" alt="" /> {/* Placeholder */}
+                {/* <img className="mx-auto mb-4" alt="" /> Placeholder */}
                 <h3 className="font-bold mb-2">{title}</h3>
                 <p>{desc}</p>
               </div>
