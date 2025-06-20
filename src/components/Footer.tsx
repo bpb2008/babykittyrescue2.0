@@ -2,7 +2,6 @@
 
 import React from "react";
 import AboveFooter from "./AboveFooter";
-import LoginPage from "@/app/login/page";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
 
@@ -20,7 +19,6 @@ const Footer: React.FC = () => {
       <footer className="flex flex-col md:flex-row bg-[#221a20] text-white py-6 px-6 md:pl-[50px] md:pr-[20px] justify-between items-center gap-6 md:gap-0 text-center md:text-left">
         <p>Copyright 2021 Baby Kitty Rescue. All Rights Reserved.</p>
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-[30px]">
-          <LoginPage />
           <ul className="flex gap-[15px]">
             <li>
               <Link href="https://www.facebook.com/babykittyrescue">
