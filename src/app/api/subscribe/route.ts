@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-  const { email } = await request.json();
+
+  try {
+    const { email } = await request.json();
 
   if (!email || !email.includes("@")) {
     return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
@@ -26,8 +28,12 @@ export async function POST(request: Request) {
   }); 
 
   if (response.status >= 400) {
-    return NextResponse.json({ error: "There was an error subscribing." }, { status: 400 });
+    const error = await response.json(); 
+    return NextResponse.json({ error: error.detail || "There was an error subscribing." }, { status: 400 });
   }
 
   return NextResponse.json({ message: "Success!" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
 }
