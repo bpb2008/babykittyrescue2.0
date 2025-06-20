@@ -7,7 +7,7 @@ const Newsletter: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (email || !/\S+@\S+\.\S+/.test(email)) {
@@ -15,10 +15,23 @@ const Newsletter: React.FC = () => {
       return;
     }
 
-    //Apparently this is where the Mailchimp or whatever logic goes!
-    console.log("Email submitted:", email);
-    setSubmitted(true);
-    setError("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "There was an error subscribing.");
+      }
+      setSubmitted(true);
+      setError("");
+    } catch (error: any) {
+      setError(error.message || "Failed to subscribe");
+    }
   };
 
   return (
