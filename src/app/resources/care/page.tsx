@@ -18,15 +18,13 @@ const Care: React.FC = () => {
 
             <section className="space-y-6 text-base text-[#221a20]">
               <div>
-                <div>
-                  <p>
-                    Taking care of kittens aged 0 days up to 4 weeks old, is
-                    called neonatal care and is the hardest part of caregiving
-                    routine. Nature has a process of mothers taking care of
-                    newborns, but with orphaned kittens, humans have to share
-                    the responsibility.{" "}
-                  </p>
-                </div>
+                <p className="mb-4">
+                  Taking care of kittens aged 0 days up to 4 weeks old, is
+                  called neonatal care and is the hardest part of caregiving
+                  routine. Nature has a process of mothers taking care of
+                  newborns, but with orphaned kittens, humans have to share the
+                  responsibility.{" "}
+                </p>
                 <h2 className="font-bold text-xl mb-2">Bedding & Heating</h2>
                 <p>
                   Warming the kitten up is essential as newborn kittens cannot

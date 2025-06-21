@@ -4,7 +4,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Newsletter from "@/components/Newsletter";
-import { Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  Twitter,
+  ChevronsRight,
+} from "lucide-react";
 
 const Resources: React.FC = () => {
   return (
@@ -20,16 +26,21 @@ const Resources: React.FC = () => {
                   alt="striped kitten being held by a human"
                   width={500}
                   height={300}
-                  className="w-full h-auto"
+                  className="w-full h-auto pb-6"
                 />
                 <h3 className="text-[#221a20] text-[20px] font-bold mb-[20px] font-stretch-110%">
                   WHAT TO FEED A NEWBORN KITTEN?
                 </h3>
                 <p>
-                  Check back later to see our kittens that are available for
-                  adoption!
+                  Kittens Have Formula Newly born cats, like every other being,
+                  thrive best on their mother’s milk. However, some unfortunate
+                  creatures like abandoned or orphaned kittens,
                 </p>
-                <p className="mt-[10px]">READ MORE</p>
+                <p className="mt-[10px]">
+                  <span className="inline-flex items-center gap-1 font-semibold hover:underline">
+                    READ MORE <ChevronsRight size={16} />
+                  </span>
+                </p>
               </div>
             </Link>
             <Link href="/resources/care">
@@ -39,16 +50,21 @@ const Resources: React.FC = () => {
                   alt="tiny cat in the palm of a human hand"
                   width={500}
                   height={300}
-                  className="w-full h-auto"
+                  className="w-full h-auto pb-6"
                 />
                 <h3 className="text-[#221a20] text-[20px] font-bold mb-[20px] font-stretch-110%">
                   NEONATAL CARE FOR KITTENS
                 </h3>
                 <p>
-                  Check back later to see our kittens that are available for
-                  adoption!
+                  Taking care of kittens aged 0 days up to 4 weeks old, is
+                  called neonatal care and is the hardest part of caregiving
+                  routine. Nature
                 </p>
-                <p className="mt-[10px]">READ MORE</p>
+                <p className="mt-[10px]">
+                  <span className="inline-flex items-center gap-1 font-semibold hover:underline">
+                    READ MORE <ChevronsRight size={16} />
+                  </span>
+                </p>
               </div>
             </Link>
             <Link href="/resources/socialize">
@@ -58,16 +74,21 @@ const Resources: React.FC = () => {
                   alt="a brown kitten held in human hands"
                   width={500}
                   height={300}
-                  className="w-full h-auto"
+                  className="w-full h-auto pb-6"
                 />
                 <h3 className="text-[#221a20] text-[20px] font-bold mb-[20px] font-stretch-110%">
                   HELP KITTENS SOCIALIZE
                 </h3>
                 <p>
-                  Check back later to see our kittens that are available for
-                  adoption!
+                  With kittens, you need to be watchful. Spitting, hissing, and
+                  hiding are all expressions of fear, not signs of aggression
+                  and must be treated with
                 </p>
-                <p className="mt-[10px]">READ MORE</p>
+                <p className="mt-[10px]">
+                  <span className="inline-flex items-center gap-1 font-semibold hover:underline">
+                    READ MORE <ChevronsRight size={16} />
+                  </span>
+                </p>
               </div>
             </Link>
           </div>
