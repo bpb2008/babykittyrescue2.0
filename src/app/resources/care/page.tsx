@@ -1,6 +1,7 @@
 " use client";
 
 import React from "react";
+import ShareButtons from "@/components/ShareButtons";
 
 const Care: React.FC = () => {
   return (
@@ -98,8 +99,10 @@ const Care: React.FC = () => {
             </section>
 
             <div className="mt-10">
-              <p className="font-semibold">SHARE THIS:</p>
-              <p className="text-sm text-gray-600">Insert social links here!</p>
+              <ShareButtons
+                title="Neonatal Care For Kittens"
+                url="https://babykittyrescue.vercel.app/resources/care"
+              />
             </div>
           </article>
 
