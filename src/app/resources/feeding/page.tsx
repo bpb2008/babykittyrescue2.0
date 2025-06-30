@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import ShareButtons from "@/components/ShareButtons";
 
 const Feeding: React.FC = () => {
   return (
@@ -8,7 +9,6 @@ const Feeding: React.FC = () => {
       <section className="h-screen bg-[url('/kitten_in_hand2.jpg')] bg-cover bg-center bg-fixed grayscale-80 w-full" />
       <main className="bg-[#f5f2f8] w-full flex flex-col items-center px-4 lg:px-8 py-10">
         <div className="w-full max-w-screen-lg flex flex-col lg:flex-row gap-10">
-          {/* Article */}
           <article className="bg-white p-6 md:p-10 shadow-md rounded-md flex-1">
             <h1 className="text-[#221a20] text-2xl font-bold mb-2">
               What to feed a newborn kitten?
@@ -56,12 +56,13 @@ const Feeding: React.FC = () => {
             </section>
 
             <div className="mt-10">
-              <p className="font-semibold">SHARE THIS:</p>
-              <p className="text-sm text-gray-600">Insert social links here!</p>
+              <ShareButtons
+                title="What To Feed A Newborn Kitten"
+                url="https://babykittyrescue.vercel.app/resources/feeding"
+              />
             </div>
           </article>
 
-          {/* Sidebar */}
           <aside className="w-full lg:w-1/3">
             <div className="bg-white p-6 shadow-md rounded-md">
               <h2 className="font-bold text-lg mb-4">Recent Posts</h2>

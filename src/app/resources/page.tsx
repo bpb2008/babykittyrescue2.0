@@ -21,6 +21,11 @@ const Resources: React.FC = () => {
           <div className="flex flex-col gap-[30px] w-full lg:w-2/3">
             <Link href="/resources/feeding">
               <div className="flex flex-col w-full max-w-[500px] px-6 py-10 break-words">
+                <Link href="/resources/new">
+                  <button className="bg-[#221a20] text-white px-4 py-2 rounded-md mt-6">
+                    Temporary + Create Post
+                  </button>
+                </Link>
                 <Image
                   src="/kitten_in_hand2.jpg"
                   alt="striped kitten being held by a human"

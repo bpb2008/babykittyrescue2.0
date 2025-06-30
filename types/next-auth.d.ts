@@ -1,5 +1,6 @@
-// import NextAuth from "next-auth";
+import NextAuth from "next-auth";
 
+// What I originally had...
 // declare module "next-auth" {
 //   interface Session {
 //     user: {
@@ -16,3 +17,14 @@
 //     email?: string | null
 //   }
 // }
+
+//What is in the tutorial... 
+
+declare module "next-auth" {
+  interface Session {
+    user: {
+      id: string; 
+      name: string; 
+    }
+  }
+}
